@@ -11,6 +11,11 @@ h1 span {
     background: white;
 }
 a:link {
+    text-decoration: none;
+    -webkit-transition: all 1s ease;
+            transition: all 1s ease; /* Время изменения цвета */
+}
+a:hover {
     color: #1657a1;
 }
 a:visited {
