@@ -30,3 +30,8 @@ a:visited {
     vertical-align: top; /* Выравнивание по верхнему краю */
    }
 
+td.rightcol {
+    text-align: right;
+}
+
+
