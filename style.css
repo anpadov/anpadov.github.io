@@ -11,6 +11,7 @@ h1 span {
     background: white;
 }
 a:link {
+    color: black;
     text-decoration: none;
     -webkit-transition: all 1s ease;
             transition: all 1s ease; /* Время изменения цвета */
