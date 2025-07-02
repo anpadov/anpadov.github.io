@@ -1,37 +1,49 @@
 body {
-    font-size: 10pt;
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Georgia", serif;
+  background: #fafafa;
+  color: #222;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.6;
 }
 
-h1 span {
-    display: block;
+header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.page {
-    background: white;
-}
-a:link {
-    color: black;
-    text-decoration: none;
-    -webkit-transition: all 1s ease;
-            transition: all 1s ease; /* Время изменения цвета */
-}
-a:hover {
-    color: #1657a1;
-}
-a:visited {
-    color: #c6c2c3;
-}
-   table.text  {
-    width:  100%; /* Ширина таблицы */
-    border-spacing: 0; /* Расстояние между ячейками */
-   }
-   table.text td {
-    vertical-align: top; /* Выравнивание по верхнему краю */
-   }
-
-td.rightcol {
-    text-align: right;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
 }
 
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
 
+.poem {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.poem h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.poem pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+#loader {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 2rem;
+}
