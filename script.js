@@ -1,4 +1,4 @@
-let pointer = 0;
+let idx = 0;            // ← единая переменная‑счётчик
 let list = [];
 let loading = false;
 
@@ -7,28 +7,32 @@ async function fetchList() {
   list = await res.json();
 }
 
-// … (list, idx, fetchList без reverse)
-
 async function loadNext() {
   if (loading || idx >= list.length) return;
   loading = true;
 
-  const {file, title, date} = list[idx++];
-  const text = await (await fetch(file)).text();
-  const body = text.split('\n').slice(2).join('\n');   // пропускаем 1‑ю и 2‑ю строки
+  const { file, title, date } = list[idx++];
+  const raw = await (await fetch(file)).text();
+  const lines = raw.split('\n');
 
-  const d = document.createElement('div');
-  d.className = 'poem';
-  d.innerHTML = `
+  // --- выдёргиваем тело стиха, учитывая, есть ли дата ---
+  let bodyStart = 1;                              // по умолчанию пропускаем заголовок
+  if (lines.length > 1 && /^\d{4}-\d{2}-\d{2}$/.test(lines[1].trim())) {
+    bodyStart = 2;                                // есть строка‑дата → пропускаем две
+  }
+  const body = lines.slice(bodyStart).join('\n');
+
+  // --- рендер ---
+  const div = document.createElement('div');
+  div.className = 'poem';
+  div.innerHTML = `
     <h2>${title}</h2>
-    <p class="date">${date}</p>
+    ${date !== '1900-01-01' ? `<p class="date">${date}</p>` : ''}
     <pre>${body}</pre>`;
-  document.getElementById('poems-container').appendChild(d);
-
-  // … остальное без изменений
+  document.getElementById('poems-container').appendChild(div);
 
   loading = false;
-  if (pointer === list.length) {
+  if (idx === list.length) {
     document.getElementById('loader').innerText = 'Все стихи загружены';
     window.removeEventListener('scroll', handleScroll);
   }
