@@ -41,6 +41,12 @@ h1 {
   font-size: 1rem;
 }
 
+.poem .date {
+  font-size: .875rem;
+  color: #777;
+  margin: -.5rem 0 1rem;
+}
+
 #loader {
   text-align: center;
   color: #888;

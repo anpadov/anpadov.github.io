@@ -7,20 +7,25 @@ async function fetchList() {
   list = await res.json();
 }
 
+// … (list, idx, fetchList без reverse)
+
 async function loadNext() {
-  if (loading || pointer >= list.length) return;
+  if (loading || idx >= list.length) return;
   loading = true;
 
-  const {file, title} = list[pointer];
-  pointer++;
+  const {file, title, date} = list[idx++];
+  const text = await (await fetch(file)).text();
+  const body = text.split('\n').slice(2).join('\n');   // пропускаем 1‑ю и 2‑ю строки
 
-  const res  = await fetch(file);
-  const body = await res.text();
+  const d = document.createElement('div');
+  d.className = 'poem';
+  d.innerHTML = `
+    <h2>${title}</h2>
+    <p class="date">${date}</p>
+    <pre>${body}</pre>`;
+  document.getElementById('poems-container').appendChild(d);
 
-  const div = document.createElement('div');
-  div.className = 'poem';
-  div.innerHTML = `<h2>${title}</h2><pre>${body.split('\n').slice(1).join('\n')}</pre>`;
-  document.getElementById('poems-container').appendChild(div);
+  // … остальное без изменений
 
   loading = false;
   if (pointer === list.length) {
