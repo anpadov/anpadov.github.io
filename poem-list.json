@@ -8,5 +8,10 @@
     "file": "poems/poem1.txt",
     "title": "БОСОНОЖКИ",
     "date": "1900-01-01"
+  },
+  {
+    "file": "poems/poem3.txt",
+    "title": "СОСЕД",
+    "date": "1900-01-01"
   }
 ]
