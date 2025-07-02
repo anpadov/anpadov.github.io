@@ -2,9 +2,9 @@
 import json, pathlib, re
 
 POEMS_DIR = pathlib.Path("poems")
-OUT = pathlib.Path("poem-list.json")
-PAT_FILE = re.compile(r"\.(txt|md)$", re.I)
-PAT_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
+OUT       = pathlib.Path("poem-list.json")
+PAT_FILE  = re.compile(r"\.(txt|md)$", re.I)
+PAT_DATE  = re.compile(r"\d{4}-\d{2}-\d{2}")
 
 poems = []
 
@@ -12,33 +12,33 @@ for f in sorted(POEMS_DIR.iterdir(), key=lambda p: p.name.lower()):
     if not PAT_FILE.search(f.name):
         continue
 
-    with f.open("r", encoding="utf-8-sig") as fp:  # SIG удаляет BOM!
-        lines = [line.strip() for line in fp if line.strip()]
+    with f.open("r", encoding="utf-8-sig") as fp:        # utf‑8‑sig убирает BOM
+        raw_lines = fp.readlines()
 
+    # убираем пустые строки в начале
+    lines = [l.strip() for l in raw_lines if l.strip()]
     if not lines:
-        print(f"⚠️  Пропущен пустой файл: {f}")
         continue
 
-    title = lines[0]
+    title_line = lines[0]
     date = "1900-01-01"
+    title = title_line
 
-    if len(lines) >= 2:
-        second_line = lines[1]
-        if PAT_DATE.fullmatch(second_line):
-            date = second_line
-        else:
-            print(f"⚠️  Невалидная дата во 2-й строке файла {f}: «{second_line}»")
-    else:
-        print(f"⚠️  Нет второй строки (даты) в {f}")
+    # 1) ищем дату прямо в заголовке
+    m = PAT_DATE.search(title_line)
+    if m:
+        date = m.group()
+        title = title_line[:m.start()].strip()
+    # 2) если не нашли — проверяем вторую строку
+    elif len(lines) > 1 and PAT_DATE.fullmatch(lines[1]):
+        date = lines[1]
 
     poems.append({
         "file": f.as_posix(),
         "title": title,
-        "date": date
+        "date":  date
     })
 
-# Сортировка по дате (свежие выше)
 poems.sort(key=lambda p: p["date"], reverse=True)
-
 OUT.write_text(json.dumps(poems, ensure_ascii=False, indent=2), encoding="utf-8")
-print(f"✅ Список готов: {len(poems)} стихов")
+print(f"✅ poem-list.json обновлён ({len(poems)} стихов)")
