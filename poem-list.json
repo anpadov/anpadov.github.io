@@ -1,10 +1,12 @@
 [
   {
-    "file": "poems/poem1.txt",
-    "title": "БОСОНОЖКИ"
+    "file": "poems/poem2.txt",
+    "title": "ФУРРИ-ДРАКОН",
+    "date": "1900-01-01"
   },
   {
-    "file": "poems/poem2.txt",
-    "title": "ФУРРИ-ДРАКОН"
+    "file": "poems/poem1.txt",
+    "title": "БОСОНОЖКИ",
+    "date": "1900-01-01"
   }
 ]
