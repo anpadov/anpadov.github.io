@@ -4,6 +4,7 @@ import json, pathlib, re
 POEMS_DIR = pathlib.Path("poems")
 OUT = pathlib.Path("poem-list.json")
 
+# poemYYYYMMDDHH.txt
 PAT_FILE = re.compile(r"poem(\d{10})\.(txt|md)$", re.I)
 
 poems = []
@@ -16,12 +17,14 @@ for f in POEMS_DIR.iterdir():
     timestamp = m.group(1)  # YYYYMMDDHH
 
     with f.open("r", encoding="utf-8-sig") as fp:
-        lines = [l.strip() for l in fp if l.strip()]
+        raw_lines = fp.readlines()
 
+    # убираем пустые строки
+    lines = [l.rstrip("\n") for l in raw_lines if l.strip()]
     if not lines:
         continue
 
-    title = lines[0]
+    title = lines[0].strip()
 
     poems.append({
         "file": f.as_posix(),
@@ -29,7 +32,7 @@ for f in POEMS_DIR.iterdir():
         "ts": timestamp
     })
 
-# сортировка: новые → старые
+# новые → старые
 poems.sort(key=lambda p: p["ts"], reverse=True)
 
 OUT.write_text(
