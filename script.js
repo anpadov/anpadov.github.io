@@ -11,7 +11,7 @@ async function loadNext() {
   if (loading || idx >= list.length) return;
   loading = true;
 
-  const { file, title, date } = list[idx++];
+  const { file, title } = list[idx++];
   const raw = await (await fetch(file)).text();
   const lines = raw.split('\n');
 
