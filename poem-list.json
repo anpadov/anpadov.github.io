@@ -1,17 +1,17 @@
 [
   {
-    "file": "poems/poem002.txt",
-    "title": "УМРЕМ НА БОЛОТЕ",
-    "date": "1900-01-01"
-  },
-  {
-    "file": "poems/poem003.txt",
-    "title": "РОВНО НИ ФИГА, ЗАКАТ",
-    "date": "1900-01-01"
-  },
-  {
-    "file": "poems/poem004.txt",
+    "file": "poems/poem2020092900.txt",
     "title": "БИТВИН СИДР FT. MUSCIMOL",
-    "date": "1900-01-01"
+    "ts": "2020092900"
+  },
+  {
+    "file": "poems/poem2019000000.txt",
+    "title": "РОВНО НИ ФИГА, ЗАКАТ",
+    "ts": "2019000000"
+  },
+  {
+    "file": "poems/poem2016000000.txt",
+    "title": "УМРЕМ НА БОЛОТЕ",
+    "ts": "2016000000"
   }
 ]
