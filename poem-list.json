@@ -1,22 +1,17 @@
 [
   {
-    "file": "poems/poem1.txt",
-    "title": "БОСОНОЖКИ",
-    "date": "1900-01-01"
-  },
-  {
-    "file": "poems/poem2.txt",
-    "title": "ФУРРИ-ДРАКОН",
-    "date": "1900-01-01"
-  },
-  {
-    "file": "poems/poem20160000.txt",
+    "file": "poems/poem002.txt",
     "title": "УМРЕМ НА БОЛОТЕ",
     "date": "1900-01-01"
   },
   {
-    "file": "poems/poem3.txt",
-    "title": "СОСЕД",
+    "file": "poems/poem003.txt",
+    "title": "РОВНО НИ ФИГА, ЗАКАТ",
+    "date": "1900-01-01"
+  },
+  {
+    "file": "poems/poem004.txt",
+    "title": "БИТВИН СИДР FT. MUSCIMOL",
     "date": "1900-01-01"
   }
 ]
