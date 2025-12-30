@@ -4,33 +4,37 @@ import json, pathlib, re
 POEMS_DIR = pathlib.Path("poems")
 OUT = pathlib.Path("poem-list.json")
 
-PAT_FILE = re.compile(r"poem(\d{10})\.(txt|md)$", re.I)
+PAT_FILE = re.compile(r"\.(txt|md)$", re.I)
+PAT_ORDER = re.compile(r"poem(\d{10,14})", re.I)  # poem2020092902
 
 poems = []
 
 for f in POEMS_DIR.iterdir():
-    m = PAT_FILE.match(f.name)
-    if not m:
+    if not PAT_FILE.search(f.name):
         continue
 
-    timestamp = m.group(1)  # YYYYMMDDHH
+    m = PAT_ORDER.search(f.name)
+    if not m:
+        continue  # если файл не по формату — пропускаем
+
+    order = m.group(1)
 
     with f.open("r", encoding="utf-8-sig") as fp:
-        lines = [l.strip() for l in fp if l.strip()]
+        lines = [l.rstrip() for l in fp.readlines() if l.strip()]
 
     if not lines:
         continue
 
-    title = lines[0]
+    title = lines[0]  # заголовок ТОЛЬКО из текста
 
     poems.append({
         "file": f.as_posix(),
         "title": title,
-        "ts": timestamp
+        "order": order
     })
 
-# сортировка: новые → старые
-poems.sort(key=lambda p: p["ts"], reverse=True)
+# сортировка: новые сверху
+poems.sort(key=lambda p: p["order"], reverse=True)
 
 OUT.write_text(
     json.dumps(poems, ensure_ascii=False, indent=2),
