@@ -4,40 +4,34 @@ import json, pathlib, re
 POEMS_DIR = pathlib.Path("poems")
 OUT = pathlib.Path("poem-list.json")
 
-PAT_FILE = re.compile(r"^poem(\d{10})\s*(.+?)\.(txt|md)$", re.I)
-#            poem YYYYMMDDTT   название
+PAT = re.compile(
+    r"poem(?P<dt>\d{10})_(?P<title>.+)\.(txt|md)$",
+    re.I
+)
 
 poems = []
 
 for f in POEMS_DIR.iterdir():
-    m = PAT_FILE.match(f.name)
+    m = PAT.match(f.name)
     if not m:
         continue
 
-    stamp = m.group(1)      # 2020092902
-    raw_title = m.group(2)  # poterya dushi
+    dt = m.group("dt")          # YYYYMMDDHH
+    title_raw = m.group("title")
 
-    year  = stamp[0:4]
-    month = stamp[4:6]
-    day   = stamp[6:8]
+    date = f"{dt[0:4]}-{dt[4:6]}-{dt[6:8]}"
+    sort_key = dt               # для сортировки
 
-    date = f"{year}-{month}-{day}"
-
-    title = raw_title.replace('_', ' ').strip()
+    title = title_raw.replace("_", " ")
 
     poems.append({
         "file": f.as_posix(),
         "title": title,
         "date": date,
-        "sort": stamp
+        "sort": sort_key
     })
 
-# сортировка по имени файла (самые новые первые)
 poems.sort(key=lambda p: p["sort"], reverse=True)
-
-# поле sort больше не нужно
-for p in poems:
-    del p["sort"]
 
 OUT.write_text(
     json.dumps(poems, ensure_ascii=False, indent=2),
