@@ -1,7 +1,27 @@
 [
   {
-    "file": "poems/poem2020092902 poterya dushi.txt",
-    "title": "poterya dushi",
+    "file": "poems/poem2020092902 poterya.txt",
+    "title": "poterya",
     "date": "2020-09-29"
+  },
+  {
+    "file": "poems/poem2020092901 ogni.txt",
+    "title": "ogni",
+    "date": "2020-09-29"
+  },
+  {
+    "file": "poems/poem2020092900 bitvin.txt",
+    "title": "bitvin",
+    "date": "2020-09-29"
+  },
+  {
+    "file": "poems/poem2019000000 rovno.txt",
+    "title": "rovno",
+    "date": "2019-00-00"
+  },
+  {
+    "file": "poems/poem2016000000 umrem.txt",
+    "title": "umrem",
+    "date": "2016-00-00"
   }
 ]
