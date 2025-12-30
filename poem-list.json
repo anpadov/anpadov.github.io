@@ -1,27 +1,7 @@
 [
   {
     "file": "poems/poem2020092902 poterya dushi.txt",
-    "title": "ПОТЕРЯ ДУШИ ВО ВРЕМЯ СЕКСА",
-    "order": "2020092902"
-  },
-  {
-    "file": "poems/poem2020092901.txt",
-    "title": "ОГНИ КОНЦА, КОНЕЦ ОГНЯ",
-    "order": "2020092901"
-  },
-  {
-    "file": "poems/poem2020092900.txt",
-    "title": "БИТВИН СИДР FT. MUSCIMOL",
-    "order": "2020092900"
-  },
-  {
-    "file": "poems/poem2019000000.txt",
-    "title": "РОВНО НИ ФИГА, ЗАКАТ",
-    "order": "2019000000"
-  },
-  {
-    "file": "poems/poem2016000000.txt",
-    "title": "УМРЕМ НА БОЛОТЕ",
-    "order": "2016000000"
+    "title": "poterya dushi",
+    "date": "2020-09-29"
   }
 ]
