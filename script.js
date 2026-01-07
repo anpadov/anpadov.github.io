@@ -41,7 +41,7 @@ async function loadNext() {
   loading = false;
 
   if (idx === list.length) {
-    document.getElementById('loader').innerText = 'Все стихи загружены';
+    document.getElementById('loader').innerText = 'все стихи загружены';
     window.removeEventListener('scroll', handleScroll);
   }
 }
