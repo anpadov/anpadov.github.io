@@ -53,3 +53,31 @@ h1 {
   font-style: italic;
   padding: 2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+.poem-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #ddd;
+}
+
+.poem-link:hover {
+  background: #f5f5f5;
+}
+
+.date {
+  opacity: 0.6;
+  font-family: monospace;
+}
