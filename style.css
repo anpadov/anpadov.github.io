@@ -62,7 +62,7 @@ h1 {
 
 
 
-
+/* list.html и poem.html */
 
 .poem-link {
   display: flex;
@@ -81,3 +81,43 @@ h1 {
   opacity: 0.6;
   font-family: monospace;
 }
+
+
+
+
+/* Стили меню */
+
+.top-menu {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px 16px;
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.top-menu a:hover {
+  opacity: 1;
+}
+
+/* Подьездный шрифт меню */
+.top-menu {
+  font-family: monospace;
+  letter-spacing: 0.05em;
+}
+
+/* Подсветка активной вкладки */
+.top-menu a.active {
+  opacity: 1;
+  border-bottom: 2px solid black;
+}
+
