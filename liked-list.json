@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Молчание",
+    "author": "Осип Мандельштам",
+    "file": "liked-poems/mandelstam/mandelstam-silentium.txt"
+  },
+  {
+    "title": "Открытка из Лиссабона",
+    "author": "Иосиф Бродский",
+    "file": "liked-poems/brodsky/brodsky-postcard.txt"
+  },
+  {
+    "title": "Не выходи из комнаты",
+    "author": "Иосиф Бродский",
+    "file": "liked-poems/brodsky/brodsky-room.txt"
+  },
+  {
+    "title": "Вольность Ода",
+    "author": "Александр Пушкин",
+    "file": "liked-poems/pushkin/pushkin-odetoliberty.txt"
+  }
+]
