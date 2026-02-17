@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 import json, pathlib
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-BASE = ROOT / "liked-poems"
-OUT  = ROOT / "liked-list.json"
+BASE = pathlib.Path("liked-poems")
+OUT  = pathlib.Path("liked-list.json")
 
 items = []
 
@@ -14,10 +13,13 @@ for f in BASE.rglob("*.txt"):
     if len(lines) < 3:
         continue
 
+    title  = lines[0]
+    author = lines[1]
+
     items.append({
-        "title": lines[0],
-        "author": lines[1],
-        "file": f.relative_to(ROOT).as_posix()
+        "author": author,
+        "title": title,
+        "file": f.as_posix()
     })
 
 OUT.write_text(
