@@ -121,3 +121,39 @@ h1 {
   border-bottom: 2px solid black;
 }
 
+
+
+.liked {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.liked h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.liked-item {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.liked-item .author {
+  font-weight: bold;
+}
+
+.liked-item .title {
+  margin: 6px 0;
+}
+
+.liked-item a {
+  font-size: 14px;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.liked-item a:hover {
+  opacity: 1;
+}
