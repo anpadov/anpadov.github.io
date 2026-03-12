@@ -1,22 +1,17 @@
 [
   {
-    "title": "Молчание",
-    "author": "Осип Мандельштам",
-    "file": "liked-poems/mandelstam/mandelstam-silentium.txt"
+    "title": "В Пятёрочке у моего дома самые красивые продавщицы!",
+    "author": "Женя Мухин",
+    "file": "liked-poems/mukhin/mukhin-prodavshchitsy.txt"
   },
   {
-    "title": "Открытка из Лиссабона",
-    "author": "Иосиф Бродский",
-    "file": "liked-poems/brodsky/brodsky-postcard.txt"
+    "title": "Зальюсь на железке дешевым пивом",
+    "author": "Леонид Лукьянов",
+    "file": "liked-poems/lukyanov/lukyanov-zalyus.txt"
   },
   {
-    "title": "Не выходи из комнаты",
-    "author": "Иосиф Бродский",
-    "file": "liked-poems/brodsky/brodsky-room.txt"
-  },
-  {
-    "title": "Вольность Ода",
-    "author": "Александр Пушкин",
-    "file": "liked-poems/pushkin/pushkin-odetoliberty.txt"
+    "title": "А что сделал ты для татарского рэпа?",
+    "author": "#всестихиговно",
+    "file": "liked-poems/vsestihygovno/vsestihygovno-tatary.txt"
   }
 ]
