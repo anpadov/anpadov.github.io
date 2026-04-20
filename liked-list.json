@@ -1,8 +1,8 @@
 [
   {
-    "title": "В Пятёрочке у моего дома самые красивые продавщицы!",
-    "author": "Женя Мухин",
-    "file": "liked-poems/mukhin/mukhin-prodavshchitsy.txt"
+    "title": "Я представляю тебя, как в хентай манге",
+    "author": "Паола Готти",
+    "file": "liked-poems/gotti/gotti-predstavlyayu.txt"
   },
   {
     "title": "Зальюсь на железке дешевым пивом",
@@ -13,5 +13,10 @@
     "title": "А что сделал ты для татарского рэпа?",
     "author": "#всестихиговно",
     "file": "liked-poems/vsestihygovno/vsestihygovno-tatary.txt"
+  },
+  {
+    "title": "В Пятёрочке у моего дома самые красивые продавщицы!",
+    "author": "Женя Мухин",
+    "file": "liked-poems/mukhin/mukhin-prodavshchitsy.txt"
   }
 ]
