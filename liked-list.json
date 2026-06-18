@@ -1,5 +1,10 @@
 [
   {
+    "title": "Зальюсь на железке дешевым пивом",
+    "author": "Леонид Лукьянов",
+    "file": "liked-poems/lukyanov/lukyanov-zalyus.txt"
+  },
+  {
     "title": "В Пятёрочке у моего дома самые красивые продавщицы!",
     "author": "Женя Мухин",
     "file": "liked-poems/mukhin/mukhin-prodavshchitsy.txt"
@@ -8,11 +13,6 @@
     "title": "А что сделал ты для татарского рэпа?",
     "author": "#всестихиговно",
     "file": "liked-poems/vsestihygovno/vsestihygovno-tatary.txt"
-  },
-  {
-    "title": "Зальюсь на железке дешевым пивом",
-    "author": "Леонид Лукьянов",
-    "file": "liked-poems/lukyanov/lukyanov-zalyus.txt"
   },
   {
     "title": "Я представляю тебя, как в хентай манге",
