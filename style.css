@@ -121,6 +121,33 @@ h1 {
   border-bottom: 2px solid black;
 }
 
+/* Стили доп меню */
+
+.sub-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  font-size: 0.95rem;
+}
+
+.sub-menu a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.sub-menu a:hover {
+  opacity: 1;
+}
+
+.sub-menu a.active {
+  opacity: 1;
+  text-decoration: underline;
+}
 
 
 
