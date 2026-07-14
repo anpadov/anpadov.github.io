@@ -179,7 +179,6 @@ h1 {
 
 main.liked {
   max-width: 720px;
-  margin: 80px auto;
   padding: 0 20px;
 }
 
@@ -189,6 +188,7 @@ main.liked {
   margin: 48px 0 16px;
   opacity: 0.85;
   letter-spacing: 0.03em;
+  font-weight: bold;
 }
 
 #liked-container h2 {
