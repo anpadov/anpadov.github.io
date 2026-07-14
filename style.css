@@ -6,6 +6,7 @@ body {
   margin: 0 auto;
   padding: 2rem 1rem;
   line-height: 1.6;
+  padding-bottom: 0;
 }
 
 header {
@@ -22,6 +23,19 @@ footer {
   font-family: monospace;
   letter-spacing: 0.05em;
   border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  padding-bottom: 2rem;
+  user-select: none;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
 }
 
 h1 {
