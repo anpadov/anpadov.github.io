@@ -22,6 +22,7 @@ async function loadPoem() {
   const body = lines.slice(bodyStart).join('\n');
 
   const div = document.getElementById('poem');
+  div.className = 'poem';
   div.innerHTML = `
     <h1>${title}</h1>
     <pre>${body}</pre>
