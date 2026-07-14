@@ -13,6 +13,17 @@ header {
   margin-bottom: 3rem;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  background-color: white;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #ddd;
+}
+
 h1 {
   font-size: 2rem;
   margin-bottom: 0.2rem;
@@ -80,6 +91,7 @@ h1 {
 .date {
   opacity: 0.6;
   font-family: monospace;
+  white-space: nowrap;
 }
 
 
